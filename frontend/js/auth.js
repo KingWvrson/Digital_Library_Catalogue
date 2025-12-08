@@ -1,7 +1,12 @@
+const LOCAL_API_BASE = 'http://localhost:5000/api';
+const REMOTE_API_BASE = 'https://digital-library-catalogue.onrender.com/api';
+const useLocalApi =
+  window.location.search.includes('useLocalApi=true') ||
+  localStorage.getItem('useLocalApi') === 'true';
 const API_BASE_URL =
-  window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://localhost:5000/api'
-    : 'https://digital-library-catalogue.onrender.com/api';
+  useLocalApi && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? LOCAL_API_BASE
+    : REMOTE_API_BASE;
 
 // ==================== Utility Functions ====================
 function showError(message) {
