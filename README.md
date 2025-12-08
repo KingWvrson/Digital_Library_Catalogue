@@ -21,6 +21,11 @@ A full-stack web application for managing a digital library with user authentica
 - **Password Hashing**: bcryptjs
 - **Database**: PostgreSQL (supports Render.com with SSL)
 
+## Live Links
+
+- Frontend (GitHub Pages): https://kingwvrson.github.io/Digital_Library_Catalogue/
+- Backend (Render): https://digital-library-catalogue.onrender.com
+
 ## Setup Instructions
 
 ### Prerequisites
@@ -80,7 +85,9 @@ A full-stack web application for managing a digital library with user authentica
    python -m http.server 5500
    ```
 
-4. Make sure the backend is running on port 5000 (or update `API_BASE_URL` in frontend JS files)
+4. Backend selection:
+   - Default: uses the deployed Render backend (`https://digital-library-catalogue.onrender.com/api`)
+   - Local dev: add `?useLocalApi=true` to the frontend URL (or run `localStorage.setItem('useLocalApi','true')`) while on `localhost`/`127.0.0.1` to point at `http://localhost:5000/api`
 
 ## API Endpoints
 
@@ -198,8 +205,12 @@ See `backend/database.sql` for the complete schema.
 - Dates are stored as DATE type (no time component)
 - Date format: DD/MM/YYYY for display
 - Make sure to change the JWT_SECRET in production
-- The frontend connects to `http://localhost:5000/api` by default
+- Frontend defaults to the deployed API at `https://digital-library-catalogue.onrender.com/api`
+- To force local API while developing, add `?useLocalApi=true` to the URL (or set `localStorage.setItem('useLocalApi','true')`) and run the frontend on `localhost`/`127.0.0.1`
 - All API endpoints require authentication except `/api/register` and `/api/login`
+
+### Redirect helper
+- A lightweight redirect page lives at `docs/index.html` to forward to the frontend; update the target there if you move the frontend path.
 
 ## Troubleshooting
 
