@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Borrows - Warren Library System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 My Borrowed Books</h1>
+    
+    <div class="action-buttons">
+      <button onclick="window.location.href='catalogue.html'">← Back to Catalogue</button>
+      <button onclick="showRecentBorrows()" id="showRecentBtn" class="success">Show Borrowed Books</button>
+      <button onclick="showAllBorrows()" id="showAllBtn">Show All</button>
+      <button onclick="logout()" class="danger">Logout</button>
+    </div>
+
+    <div style="overflow-x: auto;">
+      <table id="borrowTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Borrow Date</th>
+            <th>Due Date</th>
+            <th>Returned</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="js/borrow.js"></script>
+</body>
+</html>

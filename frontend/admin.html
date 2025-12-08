@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Warren Library System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>👤 Admin: Manage Books</h1>
+    
+    <form id="addBookForm" style="margin-bottom: 30px;">
+      <h2 style="color: #667eea; text-shadow: none; margin-bottom: 20px;">Add New Book</h2>
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="text" id="author" placeholder="Author" required>
+      <input type="text" id="isbn" placeholder="ISBN" required>
+      <input type="text" id="category" placeholder="Category">
+      <button type="submit" style="width: 100%; margin-top: 10px;">Add Book</button>
+    </form>
+
+    <h2>Books List</h2>
+    <div style="overflow-x: auto;">
+      <table id="bookTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Category</th>
+            <th>Available</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="action-buttons">
+      <button onclick="logout()" class="danger">Logout</button>
+    </div>
+  </div>
+  <script src="js/admin.js"></script>
+</body>
+</html>

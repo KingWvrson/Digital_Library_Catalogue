@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Catalogue - Warren Library System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📖 Book Catalogue</h1>
+    
+    <div class="action-buttons">
+      <button onclick="window.location.href='borrow.html'">📚 My Borrows</button>
+      <button onclick="logout()" class="danger">Logout</button>
+    </div>
+
+    <div class="catalogue-layout">
+      <!-- Search Panel -->
+      <div class="search-panel">
+        <h2>🔍 Search Books</h2>
+        <div class="search-form">
+          <input type="text" id="searchTitle" placeholder="Search by Title">
+          <input type="text" id="searchAuthor" placeholder="Search by Author">
+          <input type="text" id="searchCategory" placeholder="Search by Category">
+          <button id="searchBtn">🔍 Search</button>
+          <button id="clearBtn" class="success">Clear</button>
+        </div>
+        <div class="book-count">
+          <p id="bookCount">Loading books...</p>
+        </div>
+      </div>
+
+      <!-- Books List Panel -->
+      <div class="books-panel">
+        <h2>📚 All Books</h2>
+        <div id="booksList" class="books-list">
+          <div class="loading">Loading books...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/catalogue.js"></script>
+</body>
+</html>
