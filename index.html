@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reconnect</title>
-</head>
+    <title>Loading Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <body>
     <div class="loading-container">
-        <h1>Reconnecting...</h1>
+        <div class="loading-text">Loading...</div>
     </div>
 
     <script>
-        // redirecting to frontend/index.html 
+        // Redirect to frontend/index.html after 1.5 seconds
         setTimeout(function() {
-            window.location.href = '../frontend/index.html';
+            window.location.href = 'frontend/index.html';
         }, 50);
     </script>
 </body>
