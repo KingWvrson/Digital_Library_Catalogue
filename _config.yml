@@ -1,0 +1,19 @@
+# _config.yml
+include:
+  - frontend/
+  - frontend/**
+  - frontend/assets/**
+  - frontend/css/**
+  - frontend/js/**
+  
+# Disable Jekyll processing for everything
+exclude:
+  - README.md
+  - .gitignore
+  - LICENSE
+
+# Override safe mode to include all files
+safe: false
+
+# Allow all files
+include: [".*"]
