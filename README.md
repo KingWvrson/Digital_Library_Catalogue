@@ -140,6 +140,7 @@ project/
 │       ├── catalogue.js # Catalogue and search
 │       └── borrow.js    # Borrow management
 └── README.md
+
 ```
 
 ## Key Features
@@ -232,3 +233,20 @@ See `backend/database.sql` for the complete schema.
 ## License
 
 This project is for educational purposes.
+
+##Website
+
+"https://kingwvrson.github.io/Digital_Library_Catalogue/frontend/index.html"
+
+## Admin login
+email: admin@example.com
+password: admin123
+
+add books, remove books
+
+## Testing 
+email:arnold@acity.com
+password: 123456
+
+
+
