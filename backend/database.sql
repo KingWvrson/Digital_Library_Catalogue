@@ -39,9 +39,4 @@ CREATE INDEX IF NOT EXISTS idx_books_isbn ON books(isbn);
 CREATE INDEX IF NOT EXISTS idx_borrows_user_id ON borrows(user_id);
 CREATE INDEX IF NOT EXISTS idx_borrows_book_id ON borrows(book_id);
 
--- Optional: Insert a sample admin user (password: admin123)
--- Password hash for 'admin123' using bcrypt
--- You can generate your own with: bcrypt.hash('admin123', 10)
--- INSERT INTO users (username, email, password, role) 
--- VALUES ('admin', 'admin@library.com', '$2a$10$YourHashedPasswordHere', 'admin');
 
