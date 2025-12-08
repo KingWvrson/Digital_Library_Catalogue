@@ -94,7 +94,7 @@ A full-stack web application for managing a digital library with user authentica
 - `GET /api` - API information and status
 - `POST /api/register` - Register a new user (creates student account)
 - `POST /api/login` - Login and get JWT token
-- `GET /api/books` - Get all books (with optional search filters: ?title=...&author=...&category=...)
+- `GET /api/books` - Get all books (with optional search filters: title=...&author=...&category=...)
 - `POST /api/books` - Add a new book (Admin only)
 - `PUT /api/books/:id` - Update a book (Admin only)
 - `DELETE /api/books/:id` - Delete a book (Admin only)
@@ -111,35 +111,42 @@ cd backend
 node check-admin.js
 ```
 
-Default admin credentials (if created):
+Default admin credentials :
 - **Email**: `admin@example.com`
 - **Password**: `admin123`
 
-**⚠️ Important**: Change the admin password in production!
 
 ## Project Structure
 
 ```
-project/
-├── backend/
-│   ├── server.js          # Express server and API routes
-│   ├── database.sql       # Database schema
-│   ├── package.json      # Backend dependencies
-│   ├── .env              # Environment variables (create this)
-│   └── check-admin.js    # Script to create/check admin user
-├── frontend/
-│   ├── index.html        # Login/Register page
-│   ├── admin.html       # Admin dashboard
-│   ├── catalogue.html   # Book catalogue (students)
-│   ├── borrow.html      # My borrows page
-│   ├── css/
-│   │   └── styles.css   # Main stylesheet
-│   └── js/
-│       ├── auth.js      # Authentication logic
-│       ├── admin.js     # Admin functionality
-│       ├── catalogue.js # Catalogue and search
-│       └── borrow.js    # Borrow management
-└── README.md
+digital-library-catalogue/
+├── backend/ # Node.js/Express Backend
+│ ├── server.js # Main Express server
+│ ├── database.sql # Database schema & queries
+│ ├── check-admin.js # Admin user setup script
+│ ├── hash.js # Password hashing utilities
+│ ├── package.json # Backend dependencies
+│ ├── package-lock.json
+│ ├── .env # Environment variables 
+│ └── node_modules/ # Dependencies 
+│
+├── frontend/ # Frontend Application
+│ ├── index.html # Login/Register page
+│ ├── admin.html # Admin dashboard
+│ ├── catalogue.html # Book catalogue (student view)
+│ ├── borrow.html # Borrow management page
+│ ├── css/
+│ │ └── styles.css # Main stylesheet
+│ └── js/
+│ ├── auth.js # Authentication logic
+│ ├── admin.js # Admin functionality
+│ ├── catalogue.js # Book search & catalogue
+│ └── borrow.js # Borrow/return operations
+│
+├── .nojekyll # GitHub Pages config
+├── _config.yml # Jekyll configuration
+├── .gitattributes # Git configuration
+└── README.md 
 
 ```
 
@@ -234,17 +241,12 @@ See `backend/database.sql` for the complete schema.
 
 This project is for educational purposes.
 
-##Website
+## Website Link
 
 "https://kingwvrson.github.io/Digital_Library_Catalogue/frontend/index.html"
 
-## Admin login
-email: admin@example.com
-password: admin123
 
-add books, remove books
-
-## Testing 
+## Student created
 email:arnold@acity.com
 password: 123456
 
