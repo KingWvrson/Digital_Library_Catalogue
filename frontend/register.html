@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Warren Library System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-form-wrapper">
+      <h1 class="auth-title">📚 Warren Library System</h1>
+      <p class="auth-subtitle">Create your account to get started</p>
+      
+      <form id="registerForm" class="auth-form">
+        <div class="form-group">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" id="username" class="form-input" placeholder="Enter your username" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="emailReg" class="form-label">Email</label>
+          <input type="email" id="emailReg" class="form-input" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="passwordReg" class="form-label">Password</label>
+          <input type="password" id="passwordReg" class="form-input" placeholder="Enter your password" required>
+        </div>
+        
+        <button type="submit" class="auth-button">Sign Up</button>
+      </form>
+      
+      <p class="auth-link-text">
+        Already have an account? <a href="login.html" class="auth-link">Sign In</a>
+      </p>
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>

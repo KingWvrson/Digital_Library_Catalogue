@@ -93,10 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Auth.js loaded');
   
   const loginForm = document.getElementById('loginForm');
-  if (!loginForm) {
-    console.error('Login form not found!');
-    return;
-  }
+  if (loginForm) {
 
   loginForm.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -152,14 +149,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } finally {
       setButtonState(submitButton, false, originalButtonText);
   }
-});
+  });
+  }
 
   // ==================== Register Handler ====================
   const registerForm = document.getElementById('registerForm');
-  if (!registerForm) {
-    console.error('Register form not found!');
-    return;
-  }
+  if (registerForm) {
 
   registerForm.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -211,10 +206,13 @@ document.addEventListener('DOMContentLoaded', () => {
       await apiRequest('/register', 'POST', { username, email, password });
       console.log('Registration successful');
 
-      showSuccess('Registration successful! You can now login with your credentials.');
+      showSuccess('Registration successful! Redirecting to login page...');
       
-      // Clear form
+      // Clear form and redirect to login page
       registerForm.reset();
+      setTimeout(() => {
+        window.location.href = 'login.html';
+      }, 1500);
     } catch (error) {
       console.error('Register error:', error);
       let errorMessage = error.message || 'Registration failed. Please try again.';
@@ -235,4 +233,5 @@ document.addEventListener('DOMContentLoaded', () => {
       setButtonState(submitButton, false, originalButtonText);
   }
   });
+  }
 });
