@@ -16,7 +16,7 @@ let displayedBooks = [];
 async function apiRequest(endpoint, method = 'GET', body = null) {
   const token = localStorage.getItem('token');
   if (!token) {
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
     return;
   }
 
@@ -36,7 +36,7 @@ async function apiRequest(endpoint, method = 'GET', body = null) {
   
   if (response.status === 401 || response.status === 403) {
     localStorage.clear();
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
     return;
   }
 
@@ -59,7 +59,7 @@ function escapeHtml(text) {
 async function loadAllBooks() {
   const token = localStorage.getItem('token');
   if (!token) {
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
     return;
   }
 
@@ -196,7 +196,7 @@ async function borrowBook(bookId) {
 // Logout
 function logout() {
   localStorage.clear();
-  window.location.href = 'index.html';
+  window.location.href = 'login.html';
 }
 
 // Event listeners

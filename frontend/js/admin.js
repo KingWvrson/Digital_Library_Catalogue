@@ -12,7 +12,7 @@ const API_BASE_URL =
 async function apiRequest(endpoint, method = 'GET', body = null) {
   const token = localStorage.getItem('token');
   if (!token) {
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
     return;
   }
 
@@ -32,7 +32,7 @@ async function apiRequest(endpoint, method = 'GET', body = null) {
   
   if (response.status === 401 || response.status === 403) {
     localStorage.clear();
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
     return;
   }
 
@@ -57,7 +57,7 @@ async function loadBooks() {
   const role = localStorage.getItem('role');
   
   if (!token || role !== 'admin') {
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
     return;
   }
 
@@ -177,7 +177,7 @@ async function deleteBook(id) {
 // Logout
 function logout() {
   localStorage.clear();
-  window.location.href = 'index.html';
+  window.location.href = 'login.html';
 }
 
 // Load books on page load

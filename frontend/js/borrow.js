@@ -12,7 +12,7 @@ const API_BASE_URL =
 async function apiRequest(endpoint, method = 'GET', body = null) {
   const token = localStorage.getItem('token');
   if (!token) {
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
     return;
   }
 
@@ -32,7 +32,7 @@ async function apiRequest(endpoint, method = 'GET', body = null) {
   
   if (response.status === 401 || response.status === 403) {
     localStorage.clear();
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
     return;
   }
 
@@ -75,7 +75,7 @@ let showingRecentOnly = false;
 async function loadBorrows() {
   const token = localStorage.getItem('token');
   if (!token) {
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
     return;
   }
 
@@ -176,7 +176,7 @@ async function returnBook(borrowId) {
 // Logout
 function logout() {
   localStorage.clear();
-  window.location.href = 'index.html';
+  window.location.href = 'login.html';
 }
 
 // Load borrows on page load
