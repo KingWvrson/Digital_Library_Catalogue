@@ -74,6 +74,17 @@ const authenticateToken = (req, res, next) => {
 
 // ==================== Routes ====================
 
+// Root route - welcome message
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Welcome to the Digital Library Catalogue API!',
+    status: 'running',
+    version: '1.0.0',
+    info: 'This is an API server. All endpoints are under /api',
+    documentation: 'Visit /api for API information or see README.md for full documentation'
+  });
+});
+
 // API Info
 app.get('/api', (req, res) => {
   res.json({
@@ -382,7 +393,12 @@ app.get('/api/borrows', authenticateToken, asyncHandler(async (req, res) => {
 
 // ==================== Error Handling ====================
 app.use((req, res) => {
-  res.status(404).json({ error: 'Route not found' });
+  res.status(404).json({ 
+    message: 'Route not found',
+    info: 'This is an API server. All endpoints are under /api',
+    availableEndpoints: '/api',
+    documentation: 'Visit /api for API information or see README.md for full documentation'
+  });
 });
 
 app.use((err, req, res, next) => {
