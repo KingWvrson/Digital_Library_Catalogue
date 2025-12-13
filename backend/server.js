@@ -77,9 +77,9 @@ const authenticateToken = (req, res, next) => {
 // Root route - welcome message
 app.get('/', (req, res) => {
   res.json({
-    message: 'Welcome to the Digital Library Catalogue API!',
-    status: 'running',
+    message: 'Warren Library System API',
     version: '1.0.0',
+    status: 'running',
     info: 'This is an API server. All endpoints are under /api',
     documentation: 'Visit /api for API information or see README.md for full documentation'
   });
