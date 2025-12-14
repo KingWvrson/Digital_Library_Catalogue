@@ -436,12 +436,11 @@ Created by yours truly Warren as a student project for educational purposes.
 - password for testing as student: 123456
 
 ## Screenshots
-![alt text](<Screenshot 2025-12-14 002912-1.png>)
-![alt text](<Screenshot 2025-12-14 002939.png>)
-![alt text](<Screenshot 2025-12-14 002956.png>)
-![alt text](<Screenshot 2025-12-14 003114.png>)
-![alt text](<Screenshot 2025-12-14 003137.png>)
-
+![alt text](<Screenshot 2025-12-14 002939.png>) 
+![alt text](<Screenshot 2025-12-14 002956.png>) 
+![alt text](<Screenshot 2025-12-14 003114.png>) 
+![alt text](<Screenshot 2025-12-14 003137.png>) 
+![alt text](<Screenshot 2025-12-14 002912.png>)
 ---
 
 **Note**: This is a demonstration project. For production use, implement additional security measures, error handling, and testing.
