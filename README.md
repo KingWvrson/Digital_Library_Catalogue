@@ -428,7 +428,14 @@ This project is for educational purposes.
 
 ## 👤 Author
 
-Created as a student project for educational purposes.
+Created by yours truly Warren as a student project for educational purposes.
+
+##  Testing
+
+- user for testing as student: arnold@acity.com
+- password for testing as student: 123456
+
+
 
 ---
 
